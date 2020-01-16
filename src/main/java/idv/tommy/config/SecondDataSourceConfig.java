@@ -73,12 +73,6 @@ public class SecondDataSourceConfig {
         return bean.getObject();
     }
 
-//    @Bean(name = "secondMybatisTransactionManager")
-//    @Primary
-//    public DataSourceTransactionManager secondMybatisTransactionManager(@Qualifier("secondDataSource") DataSource dataSource) {
-//        return new DataSourceTransactionManager(dataSource);
-//    }
-
     @Bean(name = "secondSqlSessionTemplate")
     @Primary
     public SqlSessionTemplate secondSqlSessionTemplate(@Qualifier("secondSqlSessionFactory") SqlSessionFactory sqlSessionFactory) throws Exception {

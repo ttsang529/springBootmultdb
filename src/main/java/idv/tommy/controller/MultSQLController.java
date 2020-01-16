@@ -185,7 +185,7 @@ public class MultSQLController {
     @RequestMapping(value="/mybatis/first/delete/{bookid}")
     public String deleteFirst(@PathVariable("bookid") String bookid) {
     	HashMap<String, String> map = new HashMap<>();
-    	 System.out.println(bookid);
+//    	 System.out.println(bookid);
     	 MybatFirstMapper.delete(Integer.valueOf(bookid));
     	 map.put("Delete", "Success");
     	 return new Gson().toJson(map);
@@ -216,7 +216,7 @@ public class MultSQLController {
     @RequestMapping(value="/mybatis/second/id", method=RequestMethod.POST, produces =MediaType.APPLICATION_JSON_VALUE )
     @ResponseBody
     public   List<Map<String, Object>>  getBook(@RequestBody GetSecondRequest request)throws IOException  {
-		System.out.println(request.getSecondid());
+//		System.out.println(request.getSecondid());
     	return MybatSecondMapper.getOne(request.getSecondid());
     }
 }

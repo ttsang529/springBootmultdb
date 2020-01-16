@@ -42,7 +42,7 @@
           id = #{id}
     </update>
     
-    <delete id="delete" parameterType="java.lang.Long" >
+    <delete id="delete" parameterType="java.lang.Integer" >
        DELETE FROM
            test 
        WHERE 

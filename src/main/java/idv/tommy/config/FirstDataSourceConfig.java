@@ -77,12 +77,6 @@ public class FirstDataSourceConfig {
         bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mapper/MybatFirstMapper.xml"));
         return bean.getObject();
     }
-
-//    @Bean(name = "firstMybatisTransactionManager")
-//    @Primary
-//    public DataSourceTransactionManager firstMybatisTransactionManager(@Qualifier("firstDataSource") DataSource dataSource) {
-//        return new DataSourceTransactionManager(dataSource);
-//    }
     
     @Bean(name = "firstSqlSessionTemplate")
     @Primary
